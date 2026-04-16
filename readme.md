@@ -132,7 +132,7 @@ It introduces real-world frontend concepts such as:
 
 ## Live Demo
 
-_Add your deployed project link here_
+hngstage1a-pro.vercel.app
 
 ---
 
