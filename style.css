@@ -1,0 +1,321 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family:
+		system-ui,
+		-apple-system,
+		sans-serif;
+	background-color: whitesmoke;
+}
+
+header {
+	padding: 0.7rem;
+	background: orangered;
+	color: whitesmoke;
+}
+
+main {
+	padding: 1rem;
+}
+
+#todo-card {
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	box-shadow: 0px 0px 5px 2px rgba(87, 86, 86, 0.4);
+	background-color: white;
+}
+
+#edit-form {
+	margin: 10px auto;
+	border: 2px solid #999898;
+	max-width: 500px;
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+#edit-form h3 {
+	margin-bottom: 0.3rem;
+}
+
+#edit-form .form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+#edit-form input,
+#edit-form select {
+	padding: 0.4rem;
+	margin-bottom: 0.5rem;
+	border: 1px solid #999898;
+	color: #666565;
+	font-family: inherit;
+}
+
+#edit-form textarea {
+	font-family: inherit;
+	padding: 0.5rem;
+	margin-bottom: 0.4rem;
+}
+
+#edit-form .form-actions {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.form-actions button {
+	padding: 0.6rem 1rem;
+	width: calc(40% - 1rem);
+	border-radius: 0.3rem;
+	background-color: transparent;
+	border: 0;
+	box-shadow: 1px 1px 5px 0px #333;
+	color: #666565;
+	font-family: inherit;
+
+	transition:
+		background-color 0.1s ease-in,
+		color 0.1s ease;
+}
+
+#save-btn:hover {
+	color: whitesmoke;
+	background: rgb(36, 187, 36);
+}
+
+#cancel-btn:hover {
+	color: whitesmoke;
+	background: rgb(233, 69, 69);
+}
+
+.task-head {
+	display: flex;
+	justify-content: space-between;
+}
+
+#status-indicator {
+	display: flex;
+	align-items: center;
+	gap: 0.2rem;
+	padding: 0.2rem 0.4rem;
+
+	font-size: 0.7rem;
+	border-radius: 1rem;
+}
+
+.inprogress {
+	background: #fcf5cc;
+}
+
+.done {
+	background: #eefcee;
+}
+
+#status-indicator .active {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #c28c05;
+}
+
+h2 {
+	color: #333;
+}
+
+hr {
+	margin: 0.2rem 0;
+	border: 0;
+	height: 2px;
+	background: #e2dede;
+}
+
+input[type="checkbox"] {
+	width: 24px;
+	height: 24px;
+}
+
+input[type="checkbox"] + label {
+	font-size: 0.8rem;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+ul li {
+	display: grid;
+	place-content: center;
+}
+
+ul li:first-of-type {
+	font-size: 0.9rem;
+	font-style: italic;
+	color: #999898;
+}
+
+#collapsible-section {
+	padding: 1rem;
+	background: rgb(253, 241, 237);
+	margin: 0.5rem 0;
+	color: #333;
+	border-radius: 0.5rem;
+
+	max-height: 82px;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+
+#collapsible-section.expanded {
+	max-height: 1000px;
+}
+
+#expand-btn {
+	background-color: transparent;
+	border: 0;
+	color: #666565;
+	display: block;
+	margin: 0px auto;
+}
+
+.task-group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem 0;
+}
+
+.task-group time {
+	color: #666565;
+}
+
+.input-field {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+time {
+	font-style: italic;
+	display: block;
+}
+
+#due-time {
+	font-size: 0.8rem;
+}
+
+.tag {
+	padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+	font-size: 0.7rem;
+	border-radius: 1rem;
+}
+
+#work {
+	background: rgb(232, 240, 255);
+	color: rgb(23, 92, 221);
+}
+
+#urgent {
+	background: rgb(255, 230, 236);
+	color: crimson;
+}
+
+#design {
+	background: rgb(241, 232, 252);
+	color: rebeccapurple;
+}
+
+.tags-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+#overdue-indicator {
+	font-size: 0.9rem;
+	font-style: italic;
+	color: #333;
+}
+
+#status-control {
+	width: 50%;
+	padding: 0.4rem;
+	margin-bottom: 0.5rem;
+	border: 1px solid #999898;
+	color: #666565;
+	font-family: inherit;
+}
+
+.task-foot {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	font-size: 0.8rem;
+	color: #999898;
+}
+
+.task-foot span {
+	padding: 0.1rem 0.5rem 0.2rem;
+	border-radius: 1rem;
+	background: rgb(252, 245, 204);
+	color: #c28c05;
+}
+
+.todo-buttons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+
+.todo-buttons button {
+	font-family: inherit;
+	font-size: 0.9rem;
+	border-radius: 0.5rem;
+	padding: 0.2rem;
+	color: #666565;
+	background: transparent;
+	border: 0;
+}
+
+.todo-buttons button:hover {
+	color: orangered;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: orangered;
+	color: whitesmoke;
+}
+
+footer p {
+	text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+	.todo-buttons {
+		gap: 0.2rem;
+	}
+
+	.todo-buttons button {
+		font-size: 0.8rem;
+	}
+
+	time {
+		font-size: 0.9rem;
+	}
+
+	ul {
+		gap: 0.3rem;
+	}
+}
