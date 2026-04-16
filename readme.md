@@ -138,7 +138,7 @@ _Add your deployed project link here_
 
 ## GitHub Repository
 
-_Add your GitHub repository link here_
+(https://github.com/Scarlet70/Hngstage1a)
 
 ---
 
